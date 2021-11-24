@@ -1,9 +1,8 @@
 {
-  "kind": "collectionType",
-  "collectionName": "galleries",
+  "kind": "singleType",
+  "collectionName": "home_backgrounds",
   "info": {
-    "name": "gallery",
-    "description": ""
+    "name": "Home background"
   },
   "options": {
     "increments": true,
@@ -12,11 +11,8 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
-      "type": "string"
-    },
-    "pic": {
-      "collection": "file",
+    "background": {
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -26,13 +22,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "category": {
-      "via": "galleries",
-      "model": "categorie"
-    },
-    "info": {
-      "type": "text"
     }
   }
 }

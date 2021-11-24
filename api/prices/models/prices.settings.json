@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "galleries",
+  "collectionName": "prices",
   "info": {
-    "name": "gallery",
-    "description": ""
+    "name": "prices"
   },
   "options": {
     "increments": true,
@@ -12,11 +11,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "title": {
       "type": "string"
     },
-    "pic": {
-      "collection": "file",
+    "description": {
+      "type": "text"
+    },
+    "representation": {
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -27,12 +29,11 @@
       "required": false,
       "pluginOptions": {}
     },
-    "category": {
-      "via": "galleries",
-      "model": "categorie"
+    "price": {
+      "type": "string"
     },
-    "info": {
-      "type": "text"
+    "img_description": {
+      "type": "string"
     }
   }
 }
